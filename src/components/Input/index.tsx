@@ -27,7 +27,7 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
   const handleInputBlur = useCallback(() => {
     setIsFocused(false);
 
-    if (inputRef.current && inputRef.current.value) {
+    if (inputRef.current?.value) {
       setIsFilled(!!inputRef.current.value);
     }
   }, []);
